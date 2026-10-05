@@ -1,0 +1,492 @@
+/* =========================================
+   WATCH PARTY - PROFESSIONAL UI
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* =========================================
+   APP
+   ========================================= */
+
+.app {
+  min-height: 100vh;
+  background: #0f172a;
+}
+
+/* =========================================
+   HOME PAGE
+   ========================================= */
+
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.home-card {
+  width: 100%;
+  max-width: 480px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.home-title {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+
+.home-subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin: 0 0 35px;
+}
+
+.home-section {
+  margin-top: 25px;
+}
+
+.home-section-title {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: #0f172a;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+}
+
+.primary-button,
+.secondary-button,
+.danger-button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.primary-button {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+.secondary-button {
+  background: #334155;
+  color: white;
+}
+
+.secondary-button:hover {
+  background: #475569;
+}
+
+.danger-button {
+  background: #dc2626;
+  color: white;
+}
+
+.danger-button:hover {
+  background: #b91c1c;
+}
+
+.join-row {
+  display: flex;
+  gap: 10px;
+}
+
+.join-row .input {
+  flex: 1;
+}
+
+.join-row .secondary-button {
+  white-space: nowrap;
+}
+
+/* =========================================
+   ROOM HEADER
+   ========================================= */
+
+.room-page {
+  min-height: 100vh;
+  padding: 25px;
+}
+
+.room-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+}
+
+.room-info h1 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.room-info p {
+  margin: 3px 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.room-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* =========================================
+   PEOPLE IN ROOM
+   ========================================= */
+
+.participants-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+.participants-title {
+  margin: 0 0 14px;
+  font-size: 17px;
+}
+
+.participants-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.participant {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 12px;
+  background: #334155;
+  border-radius: 8px;
+}
+
+.participant-icon {
+  font-size: 18px;
+}
+
+.participant-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.participant-role {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.main-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 22px;
+  align-items: start;
+}
+
+/* =========================================
+   VIDEO SECTION
+   ========================================= */
+
+.video-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.video-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.video-change {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.video-change .input {
+  flex: 1;
+}
+
+.youtube-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.youtube-container > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.youtube-container iframe {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
+}
+
+.participant-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  cursor: default;
+}
+
+.role-message {
+  margin: 13px 0 0;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* =========================================
+   CHAT
+   ========================================= */
+
+.chat-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.chat-title {
+  margin: 0 0 15px;
+  font-size: 18px;
+}
+
+.chat-messages {
+  height: 390px;
+  overflow-y: auto;
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.empty-chat {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.message {
+  margin-bottom: 14px;
+}
+
+.message:last-child {
+  margin-bottom: 0;
+}
+
+.message-user {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.message-user.host {
+  color: #facc15;
+}
+
+.message-user.participant {
+  color: #60a5fa;
+}
+
+.message-text {
+  background: #334155;
+  padding: 9px 11px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.chat-input-row .input {
+  flex: 1;
+  min-width: 0;
+}
+
+.chat-send {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chat-send:hover {
+  background: #1d4ed8;
+}
+
+/* =========================================
+   LINK NOTICE
+   ========================================= */
+
+.link-notice {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #172554;
+  color: #93c5fd;
+  font-size: 13px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-card {
+    width: 100%;
+  }
+
+  .chat-messages {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .room-page {
+    padding: 15px;
+  }
+
+  .home-page {
+    padding: 15px;
+  }
+
+  .home-card {
+    padding: 25px 20px;
+  }
+
+  .home-title {
+    font-size: 26px;
+  }
+
+  .room-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .room-actions {
+    width: 100%;
+  }
+
+  .room-actions button {
+    flex: 1;
+  }
+
+  .join-row {
+    flex-direction: column;
+  }
+
+  .video-card {
+    padding: 12px;
+  }
+
+  .video-change {
+    flex-direction: column;
+  }
+
+  .video-change .input {
+    width: 100%;
+  }
+
+  .participants-list {
+    flex-direction: column;
+  }
+
+  .participant {
+    width: 100%;
+  }
+
+  .chat-input-row {
+    flex-direction: row;
+  }
+
+  .chat-send {
+    padding: 0 12px;
+  }
+}
